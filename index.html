@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sairudra More — Resume</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#ffffff',
+              foreground: '#111827',
+              'muted-foreground': '#6b7280',
+              secondary: '#f3f4f6',
+              'secondary-foreground': '#111827'
+            }
+          }
+        }
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .ambient-bg {
+        --x: 50%;
+        --y: 50%;
+        background: radial-gradient(circle at var(--x) var(--y), rgba(59,130,246,0.15), transparent 40%);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-background text-foreground">
+    <div id="root"></div>
+    <script type="module" src="./src/main.tsx"></script>
+  </body>
+</html>
