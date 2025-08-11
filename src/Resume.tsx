@@ -11,6 +11,7 @@ const Resume = () => {
     const el = containerRef.current;
     if (!el) return;
 
+    if (!window.matchMedia) return; // Guard for environments without matchMedia
     const mql = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (mql.matches) return; // Respect reduced motion
 
